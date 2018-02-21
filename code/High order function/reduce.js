@@ -1,6 +1,6 @@
 let total = [0, 1, 2, 3].reduce(function(sum,value){
     return sum + value;
-}, 0);
+},0);
 console.log(total)
 
 let flattened = [[0,1], [2, 3], [4, 5]].reduce(function(a,b){
