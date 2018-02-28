@@ -63,7 +63,7 @@ Counter1.decrement();
 console.log(Counter1.value()); /* logs 1 */
 console.log(Counter2.value()); /* logs 0 */
 ```  
-在上面的例子中 我们可以看到变量 privateCounter 和 函数 changeBy作为下面三个函数共同的词法环境形成了闭包。在 makeCounter()执行之后, 本该消失的词法环境被保留下来，只能通过返回的三个函数进行更改和访问。这种行为模拟出了类似 JAVA 类中的私有变量和私有方法。
+在上面的例子中 我们可以看到变量 privateCounter 和 函数 changeBy作为下面三个函数共同的词法环境形成了闭包。在 makeCounter()执行之后, 本该消失的词法环境被保留下来，只能通过返回的三个函数进行更改和访问。这种行为模拟出了类似 JAVA 类中的私有变量和私有方法。
 
 ---
 ## 在循环中创建闭包：一个常见错误；
@@ -121,7 +121,7 @@ function setupHelpAnonymous(){
 
   setupHelpAnonymous()
   ```   
-在上面的代码片段中 我们使用了一个 IIFE (立即执行函数表达式) 对 item 这个引用进行了立刻求值。这样我们就能得到想要的结果。而在ES6中的 ’块级作用域‘ 也可以解决这个问题。
+在上面的代码片段中 我们使用了一个 IIFE (立即执行函数表达式) 对 item 这个引用进行了立刻求值。这样我们就能得到想要的结果。而在ES6中的 ’块级作用域‘ 也可以解决这个问题。
 ```js
 function showHelp(help) {
   document.getElementById('help').innerHTML = help;
