@@ -6,12 +6,11 @@
  * A closure is the combination of 
  * a function 
  * and 
- * the lexical enviroment within which that function was declared.
+ * the lexical environment within which that function was declared.
  * 
  */
-
- function init(){
-     var name = "Mozilla";
+function init(){
+    var name = "Mozilla";
      function displayName(){
          console.log(name);
      }
@@ -31,9 +30,9 @@
 */
 
 function makeFunc(){
-    var name = 'Mozilla';
+    var name1 = 'Mozilla1';
     function displayName(){
-        console.log(name);
+        console.log(name1);
     }
     return displayName;
 }
