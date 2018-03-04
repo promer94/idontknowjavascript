@@ -9,5 +9,23 @@
   },
   "scripts": {
     "start": "parcel index.html"
-  }
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.6.2"
+  },
+  "description": "---\r Learning JavaScript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/promer94/javascipt_everyday.git"
+  },
+  "keywords": [
+    "learn",
+    "javascript",
+    "es6"
+  ],
+  "author": "yixuanxu",
+  "bugs": {
+    "url": "https://github.com/promer94/javascipt_everyday/issues"
+  },
+  "homepage": "https://github.com/promer94/javascipt_everyday#readme"
 }
