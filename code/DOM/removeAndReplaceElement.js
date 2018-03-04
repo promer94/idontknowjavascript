@@ -17,7 +17,7 @@ cardAction.replaceChild(newHeading, oldHeading);
 const list = document.querySelectorAll('li');
 list[0].remove;
 
-let listCollection = document.querySelector('ul');
+const listCollection = document.querySelector('ul');
 listCollection.removeChild(list[3]);
 
 /** Classes & ATTR */
@@ -25,7 +25,7 @@ const firstLi = document.querySelector('li:first-child');
 const link = firstLi.children[0];
 
 /** Classes */
-let val 
+let val;
 val = link.className;
 val = link.classList;
 val = link.classList[0];
@@ -36,4 +36,3 @@ link.classList.remove('test');
 val = link.getAttribute('href');
 val = link.setAttribute('href');
 link.removeAttribute('href');
-

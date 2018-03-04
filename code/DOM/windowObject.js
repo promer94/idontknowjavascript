@@ -9,10 +9,10 @@ const input = prompt();
 alert(input);
 
 //Confirm
-if(confirm('Are you sure')){
-    console.log('yes');
-}else{
-    console.log('no')
+if (confirm('Are you sure')) {
+  console.log('yes');
+} else {
+  console.log('no');
 }
 
 //Outter height and width
@@ -34,7 +34,7 @@ val = window.location.href;
 val = window.location.search;
 
 //History Object
-window.history
+window.history;
 
 //Navigator Object
 val = window.navigator;

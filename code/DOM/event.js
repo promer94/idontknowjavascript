@@ -6,7 +6,7 @@
 
 document.querySelector('.clear-tasks').addEventListener('click', onClick);
 
-function onClick(e){
+function onClick(e) {
   console.log('Clicked');
 
   let val;
@@ -36,23 +36,22 @@ function onClick(e){
   console.log(val);
 }
 
-let list = document.querySelector('ul');
+const list = document.querySelector('ul');
 console.log(list.children);
 
-let icon = document.createElement('i')
+const icon = document.createElement('i');
 icon.className = 'fa fa-remove';
 
-let deleteIcon = document.createElement('a');
+const deleteIcon = document.createElement('a');
 deleteIcon.className = 'delete-item secondary-content';
 deleteIcon.href = '#';
 deleteIcon.appendChild(icon);
 
-let listItem = document.createElement('li');
+const listItem = document.createElement('li');
 listItem.className = 'collection-item';
 listItem.id = 'id';
 listItem.setAttribute('title', 'New');
 listItem.appendChild(document.createTextNode('Hello'));
 listItem.appendChild(deleteIcon);
-
 
 list.appendChild(listItem);
