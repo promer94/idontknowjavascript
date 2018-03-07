@@ -11,6 +11,8 @@ const taskInput = document.querySelector('#task');
  * Load all EventListeners
  */
 
+loadEventListener();
+
 function loadEventListener() {
   /** DOM loadEvent */
   document.addEventListener('DOMContentLoaded', getTasks);
@@ -97,7 +99,6 @@ function filterTasks(e) {
     }
   });
 }
-loadEventListener();
 
 /** localStorage */
 
