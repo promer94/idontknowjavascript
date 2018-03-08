@@ -1,3 +1,3 @@
 # javascipt_everyday
 ---
-Learning JavaScript
+[Learning JavaScript](https://www.gitbook.com/book/promer94)
