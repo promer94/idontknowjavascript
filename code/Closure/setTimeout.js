@@ -11,14 +11,14 @@ for(var b = 0; b < 5; b +=1){//eslint-disable-line
 for(var c = 0; c < 5; c +=1){ //eslint-disable-line
   (function(c) {
     setTimeout(() => {
-      console.log(c); //eslint-disable-line
+      console.log(`c = ${c}`); //eslint-disable-line
     });
   })(c);
 }
 for(var d = 0; d < 5; d +=1){ //eslint-disable-line
   setTimeout(
     (function() {  //eslint-disable-line
-      console.log(d); //eslint-disable-line
+      console.log(`d = ${d}`); //eslint-disable-line
     })(),
     d * 1000
   );
