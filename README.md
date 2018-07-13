@@ -1,3 +1,3 @@
-# javascript_everyday
+# Keep learning
 ---
-[Learning JavaScript](https://www.gitbook.com/book/promer94)
+
