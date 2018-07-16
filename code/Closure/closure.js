@@ -14,9 +14,9 @@ function init() {
   function displayName() {
     console.log(name);  //eslint-disable-line
   }
-  displayName();
+  displayName()
 }
-init(); // console will display Mozilla
+init() // console will display Mozilla
 
 /**
  * 词法作用域所使用的域， 是变量在代码中声明的位置所决定的。 嵌套的的函数可以访问其在外部声明的变量。
@@ -28,14 +28,14 @@ init(); // console will display Mozilla
  */
 
 function makeFunc() {
-  const name1 = 'Mozilla1';
+  const name1 = 'Mozilla1'
   function displayName() {
     console.log(name1); //eslint-disable-line
   }
-  return displayName;
+  return displayName
 }
-const myFunc = makeFunc();
-myFunc(); //console will display Mozilla
+const myFunc = makeFunc()
+myFunc() //console will display Mozilla
 
 /**
  * 从以上例子中可以看到 name作为一个局部变量，在makeFunc执行完之后 依然保留在内存中。 这与 Java 之类的
@@ -54,12 +54,12 @@ myFunc(); //console will display Mozilla
  */
 function makeAdder(x) {
   return function(y) {
-    return x + y;
-  };
+    return x + y
+  }
 }
 
-const add5 = makeAdder(5);
-const add10 = makeAdder(10);
+const add5 = makeAdder(5)
+const add10 = makeAdder(10)
 
 console.log(add5(2)); //eslint-disable-line
 console.log(add10(2)); //eslint-disable-line

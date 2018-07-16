@@ -12,61 +12,61 @@
  */
 
 const Counter = (function() {
-  let privateCounter = 0;
+  let privateCounter = 0
   function changeBy(val) {
-    privateCounter += val;
+    privateCounter += val
   }
   return {
     increment() {
-      changeBy(1);
+      changeBy(1)
     },
     decrement() {
-      changeBy(-1);
+      changeBy(-1)
     },
     value() {
-      return privateCounter;
+      return privateCounter
     }
-  };
-})();
+  }
+})()
 
-console.log(Counter.value()); /* console display 0*/
-Counter.increment();
-Counter.increment();
-console.log(Counter.value()); /* console display 2 */
-Counter.decrement();
-console.log(Counter.value()); /* console display 1*/
+console.log(Counter.value()) /* console display 0*/
+Counter.increment()
+Counter.increment()
+console.log(Counter.value()) /* console display 2 */
+Counter.decrement()
+console.log(Counter.value()) /* console display 1*/
 
 /**
  * 函数工厂形式
  */
 
 const makeCounter = function() {
-  let privateCounter = 0;
+  let privateCounter = 0
   function changeBy(val) {
-    privateCounter += val;
+    privateCounter += val
   }
   return {
     increment() {
-      changeBy(1);
+      changeBy(1)
     },
     decrement() {
-      changeBy(-1);
+      changeBy(-1)
     },
     value() {
-      return privateCounter;
+      return privateCounter
     }
-  };
-};
+  }
+}
 
-const Counter1 = makeCounter();
-const Counter2 = makeCounter();
-console.log(Counter1.value()); /* logs 0 */
-Counter1.increment();
-Counter1.increment();
-console.log(Counter1.value()); /* logs 2 */
-Counter1.decrement();
-console.log(Counter1.value()); /* logs 1 */
-console.log(Counter2.value()); /* logs 0 */
+const Counter1 = makeCounter()
+const Counter2 = makeCounter()
+console.log(Counter1.value()) /* logs 0 */
+Counter1.increment()
+Counter1.increment()
+console.log(Counter1.value()) /* logs 2 */
+Counter1.decrement()
+console.log(Counter1.value()) /* logs 1 */
+console.log(Counter2.value()) /* logs 0 */
 
 /* 此种使用闭包的方式，提供了许多与面向对象变成相关的好处  
   特别是数据的隐藏和封装 ( encapsulation ) */

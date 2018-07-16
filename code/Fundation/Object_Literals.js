@@ -8,12 +8,12 @@ const person = {
     city: 'London',
     street: 'Street'
   }
-};
-let val = person.address;
-console.log(val);
-val = person.hobbies[0];
-console.log(val);
-val = person.address.city;
-console.log(val);
-val = person.address.street;
-console.log(val);
+}
+let val = person.address
+console.log(val)
+val = person.hobbies[0]
+console.log(val)
+val = person.address.city
+console.log(val)
+val = person.address.street
+console.log(val)

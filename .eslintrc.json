@@ -31,8 +31,9 @@
         "spaced-comment": [0],
         "quotes": [0],
         "func-names": [0],
-        "no-console": [1], 
-        "prettier/prettier": ["error", { "singleQuote": true }]
+        "no-console": [0], 
+        "semi": ["error", "never"],
+        "prettier/prettier": ["error", { "singleQuote": true, "semi": false }]
     },
     "plugins": [
     "prettier"

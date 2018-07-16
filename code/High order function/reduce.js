@@ -1,12 +1,12 @@
 const total = [0, 1, 2, 3].reduce((sum, value) => {
-  return sum + value;
-}, 0);
-console.log(total);
+  return sum + value
+}, 0)
+console.log(total)
 
 const flattened = [[0, 1], [2, 3], [4, 5]].reduce((a, b) => {
-  return a.concat(b);
-}, []);
-console.log(flattened);
+  return a.concat(b)
+}, [])
+console.log(flattened)
 
 /* arr.reduce(callback[, initialValue] ) */
 
@@ -40,18 +40,18 @@ console.log(flattened);
  */
 
 const maxCallback = (pre, cur) => {
-  return Math.max(pre.x, cur.x);
-};
+  return Math.max(pre.x, cur.x)
+}
 
 const maxCallback2 = (max, cur) => {
-  return Math.max(max, cur);
-};
+  return Math.max(max, cur)
+}
 
-console.log([{ x: 22 }, { x: 42 }].reduce(maxCallback)); // 42
-console.log([{ x: 22 }].reduce(maxCallback)); // {x: 22}
+console.log([{ x: 22 }, { x: 42 }].reduce(maxCallback)) // 42
+console.log([{ x: 22 }].reduce(maxCallback)) // {x: 22}
 //console.log([ ].reduce( maxCallback ));                   // TypeError
 
 //Map reduce; better solution
 console.log(
   [{ x: 22 }, { x: 42 }].map(el => el.x).reduce(maxCallback2, -Infinity)
-);
+)

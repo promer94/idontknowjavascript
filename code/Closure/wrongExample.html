@@ -24,8 +24,8 @@
                 {'id': 'age', 'help': 'Your age (you must be over 16)'}
               ];
           
-            for (var i = 0; i < helpText.length; i++) {
-              var item = helpText[i];
+            for (let i = 0; i < helpText.length; i++) {
+              const item = helpText[i];
               document.getElementById(item.id).onfocus = function() {
                 showHelp(item.help);
               }

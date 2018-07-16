@@ -1,20 +1,20 @@
-const name = 'John';
-const age = 35;
-const job = 'Frontend developer';
+const name = 'John'
+const age = 35
+const job = 'Frontend developer'
 const city = 'Miamai'
 
-function hello(){
-    return 'hello'
+function hello() {
+  return 'hello'
 }
-let html;
+let html
 
-let html = `
+const html = `
     <ul>
     <li>Name: ${name}</li>
     <li>Age: ${age}</li>
     <li>Function: ${hello()}</li>
-    <li>${age >30 ? hello(): age }</li>
+    <li>${age > 30 ? hello() : age}</li>
     </ul>
 `
 
-document.body.innerHTML = html;
+document.body.innerHTML = html
