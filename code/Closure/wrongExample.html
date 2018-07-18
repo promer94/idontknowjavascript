@@ -4,34 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
     <title>Document</title>
 </head>
 <body>
-    <p id="help">Helpful notes will appear here</p>
-    <p>E-mail: <input type="text" id="email" name="email"></p>
-    <p>Name: <input type="text" id="name" name="name"></p>
-    <p>Age: <input type="text" id="age" name="age"></p>
+  <div class="container">
+      <h1 id='help'>Helpful notes will appear here</h1>
+      <p>E-mail: <input type="text" id="email" name="email"></p>
+      <p>Name: <input type="text" id="name" name="name"></p>
+      <p>Age: <input type="text" id="age" name="age"></p>
+  </div>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script>
         //在这个例子中 三个闭包共享了一个环境中的变量item ，所以会一直显示 age 的 help 信息
         function showHelp(help) {
-            document.getElementById('help').innerHTML = help;
-          }
-          
-          function setupHelp() {
-            var helpText = [
-                {'id': 'email', 'help': 'Your e-mail address'},
-                {'id': 'name', 'help': 'Your full name'},
-                {'id': 'age', 'help': 'Your age (you must be over 16)'}
-              ];
-          
-            for (let i = 0; i < helpText.length; i++) {
-              const item = helpText[i];
-              document.getElementById(item.id).onfocus = function() {
-                showHelp(item.help);
-              }
+          document.getElementById('help').innerHTML = help;
+        }
+        
+        function setupHelp() {
+          var helpText = [
+              {'id': 'email', 'help': 'Your e-mail address'},
+              {'id': 'name', 'help': 'Your full name'},
+              {'id': 'age', 'help': 'Your age (you must be over 16)'}
+            ];
+        
+          for (var i = 0; i < helpText.length; i++) {
+            var item = helpText[i];
+            document.getElementById(item.id).onfocus = function() {
+              showHelp(item.help);
             }
           }
-          setupHelp();
+        }
+        
+        setupHelp();
     </script>
 </body>
 </html>
