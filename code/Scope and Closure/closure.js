@@ -10,9 +10,9 @@
  *
  */
 function init() {
-  var name = 'Mozilla'; //eslint-disable-line
+  var name = 'Mozilla' //eslint-disable-line
   function displayName() {
-    console.log(name);  //eslint-disable-line
+    console.log(name) //eslint-disable-line
   }
   displayName()
 }
@@ -30,7 +30,7 @@ init() // console will display Mozilla
 function makeFunc() {
   const name1 = 'Mozilla1'
   function displayName() {
-    console.log(name1); //eslint-disable-line
+    console.log(name1) //eslint-disable-line
   }
   return displayName
 }
@@ -61,8 +61,8 @@ function makeAdder(x) {
 const add5 = makeAdder(5)
 const add10 = makeAdder(10)
 
-console.log(add5(2)); //eslint-disable-line
-console.log(add10(2)); //eslint-disable-line
+console.log(add5(2)) //eslint-disable-line
+console.log(add10(2)) //eslint-disable-line
 
 /**
  * 闭包的实际作用

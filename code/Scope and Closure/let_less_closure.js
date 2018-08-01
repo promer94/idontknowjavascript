@@ -4,13 +4,14 @@ function showHelp(help) {
 }
 
 function setupHelp() {
-    var helpText = [ //eslint-disable-line
+  const helpText = [
+    //eslint-disable-line
     { id: 'email', help: 'Your e-mail address' },
     { id: 'name', help: 'Your full name' },
     { id: 'age', help: 'Your age (you must be over 16)' }
   ]
 
-    for (let i = 0; i < helpText.length; i++) { //eslint-disable-line
+  for (let i = 0; i < helpText.length; i += 1) {
     const item = helpText[i]
     document.getElementById(item.id).onfocus = function() {
       showHelp(item.help)

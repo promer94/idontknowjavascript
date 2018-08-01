@@ -11,7 +11,8 @@
 /**
  * 此段代码并未利用到闭包的好处。
  */
-function MyObject(name, message) { //eslint-disable-line
+function MyObject(name, message) {
+  //eslint-disable-line
   this.name = name.toString()
   this.message = message.toString()
   this.getName = function() {
@@ -26,7 +27,8 @@ function MyObject(name, message) { //eslint-disable-line
 /**
  * 继承的原型可以为所有对象共享，不必在每一次创建时对象时定义方法。
  */
-function MyObject1(name, message) { //eslint-disable-line
+function MyObject1(name, message) {
+  //eslint-disable-line
   this.name = name.toString()
   this.message = message.toString()
 }

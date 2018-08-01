@@ -1,4 +1,4 @@
-for (var a = 0; a < 5; a += 1) {
+for (let a = 0; a < 5; a += 1) {
   //eslint-disable-line
   console.log(`a = ${a}`) //eslint-disable-line
 }
@@ -11,7 +11,7 @@ for (var b = 0; b < 5; b += 1) {
   }, 1000 * b)
 }
 
-for (var c = 0; c < 5; c += 1) {
+for (let c = 0; c < 5; c += 1) {
   //eslint-disable-line
   ;(function(c) {
     setTimeout(() => {

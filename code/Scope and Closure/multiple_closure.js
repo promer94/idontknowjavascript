@@ -16,8 +16,8 @@ function setupHelp() {
     { id: 'age', help: 'Your age (you must be over 16)' }
   ]
 
-  for (var i = 0; i < helpText.length; i++) { // eslint-disable-line
-    var item = helpText[i]; // eslint-disable-line
+  for (let i = 0; i < helpText.length; i += 1) {
+    var item = helpText[i] // eslint-disable-line
     document.getElementById(item.id).onfocus = makeHelpCallback(item.help)
   }
 }
@@ -33,11 +33,14 @@ function setupHelpAnonymous() {
     { id: 'age', help: 'Your age (you must be over 16)' }
   ]
 
-  for (var i = 0; i < helpText.length; i++) { // eslint-disable-line
-    (function() { // eslint-disable-line
-      var item = helpText[i]; // eslint-disable-line
-      document.getElementById(item.id).onfocus = function() { // eslint-disable-line
-        showHelp(item.help); // eslint-disable-line
+  for (var i = 0; i < helpText.length; i++) {
+    // eslint-disable-line
+    ;(function() {
+      // eslint-disable-line
+      var item = helpText[i] // eslint-disable-line
+      document.getElementById(item.id).onfocus = function() {
+        // eslint-disable-line
+        showHelp(item.help) // eslint-disable-line
       }
     })()
   }
