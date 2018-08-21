@@ -55,6 +55,7 @@ function addTask(e) {
 
 /** Finish or delete task */
 function changeTaskState(e) {
+  console.log(e)
   if (e.target.parentElement.classList.contains('collection')) {
     if (e.target.classList.contains('finished')) {
       e.target.setAttribute('style', '')

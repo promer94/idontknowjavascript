@@ -17,7 +17,7 @@ const p2 = new Promise(resolve => {
   )
   setTimeout(() => {
     resolve(thisPromiseCount)
-  }, 3000)
+  }, 500)
 })
 p1.then(res => {
   console.log(`p1${res}`)

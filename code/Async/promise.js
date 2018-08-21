@@ -5,9 +5,9 @@
 new Promise(resolve => {
   resolve(1)
   Promise.resolve().then(() => {
-    console.log(4)
+    console.log(3)
   })
 }).then(t => {
   console.log(t)
 })
-console.log(3)
+console.log(2)

@@ -24,6 +24,7 @@
     ]
   },
   "dependencies": {
+    "lie": "^3.3.0",
     "parcel-bundler": "^1.9.7",
     "serve": "^9.2.0"
   },
