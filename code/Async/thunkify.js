@@ -1,14 +1,10 @@
-const thunkify = fn => (...args) => cb => {
-  args.push(cb)
-  return fn(...args)
+const thunkify = fn => (...args) => callback => {
+  return fn(...args)(callback)
+}
+const thunkifyFunc = (...args) => callback => {
+  setTimeout(() => {
+    callback(...args)
+  })
 }
 const b = [1, 2, 3, 4, 5]
-thunkify((...args) => {
-  setTimeout(() => {
-    const cb = args.pop()
-    cb(...args)
-  })
-})(...b)(
-  (...args) => console.log(args.reduce((prev, current) => prev + current)),
-  0
-)
+console.log(thunkify(thunkifyFunc)(...b))

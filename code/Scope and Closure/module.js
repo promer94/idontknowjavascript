@@ -38,7 +38,7 @@ MyModules.define('bar2', [], () => {
 
 MyModules.define('foo', ['bar1', 'bar2'], (...args) => {
   function awesome() {
-    console.log(args)
+    console.log(...args)
   }
 
   return {
