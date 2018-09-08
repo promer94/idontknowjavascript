@@ -5,7 +5,7 @@ const MyModules = (function Manager() {
     for (let i = 0; i < deps.length; i += 1) {
       deps[i] = modules[deps[i]]
     }
-    modules[name] = impl.apply(impl, deps)
+    modules[name] = impl(...deps)
   }
 
   function get(name) {
@@ -38,7 +38,9 @@ MyModules.define('bar2', [], () => {
 
 MyModules.define('foo', ['bar1', 'bar2'], (...args) => {
   function awesome() {
-    console.log(...args)
+    const result1 = args[0].hello(0)
+    const result2 = args[1].hello(1)
+    return { result1, result2 }
   }
 
   return {
@@ -48,4 +50,4 @@ MyModules.define('foo', ['bar1', 'bar2'], (...args) => {
 
 const foo = MyModules.get('foo')
 
-foo.awesome()
+console.log(foo.awesome())

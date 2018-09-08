@@ -1,14 +1,3 @@
-let a = 0
-
-function result(val) {
-  console.log(val + a)
-}
-function doSync(cb) {
-  cb(1)
-}
-doSync(asyncify(result))
-a += 1
-
 function asyncify(fn) {
   const origFn = fn //store original function
   let intv = setTimeout(() => {
@@ -24,13 +13,23 @@ function asyncify(fn) {
       /**
        * Add the wrapper's `this` to the `bind()` call parameters, as well as currying any passed in parameters
        */
-      fn = origFn.bind(this, ...args) //change the fn reference which is waiting in the eventloop
+      fn = origFn.bind(this, ...args) //change the fn reference which is waiting in the event loop
     } else {
       /**
        * Already async
        * Invoke original function
        */
-      origFn.apply(this, arguments) //eslint-disable-line
+      origFn(...args)
     }
   }
 }
+let a = 0
+
+function result(val) {
+  console.log(val + a)
+}
+function doSync(cb) {
+  cb(1)
+}
+doSync(asyncify(result))
+a += 2

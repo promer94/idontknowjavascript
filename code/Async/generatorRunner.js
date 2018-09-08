@@ -45,7 +45,8 @@ function doLater(a, b) {
 function* main() {
   try {
     const result = yield doLater(1, 2)
-    console.log(result)
+    const num = yield doLater(2, 3)
+    console.log(result + num)
   } catch (e) {
     console.log(e.message)
   }
