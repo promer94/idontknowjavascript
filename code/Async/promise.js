@@ -7,7 +7,7 @@ new Promise(resolve => {
   Promise.resolve().then(() => {
     console.log(3)
   })
-}).then(t => {
-  console.log(t)
+}).then(data => {
+  console.log(data)
 })
 console.log(2)
