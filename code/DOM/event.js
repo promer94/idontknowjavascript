@@ -3,7 +3,6 @@
 
 //   //e.preventDefault();
 // });
-
 document.querySelector('.clear-tasks').addEventListener('click', onClick)
 
 function onClick(e) {

@@ -1,6 +1,6 @@
 /**
- * In Chrome 3 4 1 return undefined
- * In Firefox 3 return undefined 4 1
+ * In Chrome 2 3 1 return undefined
+ * In Firefox 2 return undefined 3 1
  */
 new Promise(resolve => {
   resolve(1)
