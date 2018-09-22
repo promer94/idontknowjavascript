@@ -1,11 +1,13 @@
 const thunkify = fn => (...args) => callback => {
-  return fn(...args)(callback)
+  return fn(...args, callback)
 }
-const thunkifyFunc = (...args) => callback => {
-  setTimeout(() => {
-    callback(...args)
-  })
+function foo(x, y, cb) {
+  setTimeout(() => cb(x + y), 1000)
 }
-const b = [1, 2, 3, 4, 5]
-const logValues = (...args) => console.log(args)
-thunkify(thunkifyFunc)(...b)(logValues)
+
+const fooThunkory = thunkify(foo)
+
+const fooThunk = fooThunkory(3, 4)
+fooThunk(sum => {
+  console.log(sum)
+})

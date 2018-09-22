@@ -9,13 +9,3 @@ function request(url) {
     oReq.send()
   })
 }
-
-const wrap = fn => (
-  ...args //eslint-disable-line
-) =>
-  new Promise((resolve, reject) => {
-    fn(...args, (error, v) => {
-      if (error) reject(error)
-      else resolve(v)
-    })
-  })
