@@ -1,10 +1,10 @@
 Object.defineProperty(Object.prototype, '__proto__', {
   //eslint-disable-line
-  get: function() {
+  get() {
     //eslint-disable-line
     return Object.getPrototypeOf(this) //eslint-disable-line
   },
-  set: function(o) {
+  set(o) {
     //eslint-disable-line
     // setPrototypeOf(..) as of ES6
     Object.setPrototypeOf(this, o) //eslint-disable-line
