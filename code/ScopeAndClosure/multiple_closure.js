@@ -1,4 +1,4 @@
-/* 使用函数工厂的模式创建多个闭包 */
+/* eslint-disable */
 function showHelp(help) {
   document.getElementById('help').innerHTML = help
 }

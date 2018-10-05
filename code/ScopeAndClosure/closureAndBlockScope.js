@@ -1,3 +1,4 @@
+/* eslint-disable */
 /** 2 2 will be the output
  *  The reason is that the arrow function contains the reference of a global variable i
  *  which has changed

@@ -1,3 +1,4 @@
+/* eslint-disable */
 for (let a = 0; a < 5; a += 1) {
   //eslint-disable-line
   console.log(`a = ${a}`) //eslint-disable-line
