@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+  <style>
+    html,
+    body,
+    div {
+      width: 100%;
+      height: 100%;
+    }
+
+    div {
+      background: #000;
+    }
+  </style>
+
+  <body>
+    <div id="panel"></div>
+    <script>
+      {
+        const throttle = (fn, threshold = 160) => {
+          let timeout
+          let start = new Date()
+
+          return (...args) => {
+            const curr = new Date() - 0
+            clearTimeout(timeout)
+            if (curr - start >= threshold) {
+              console.log("now", curr, curr - start)
+              fn(...args)
+              start = curr
+            } else {
+              timeout = setTimeout(() => {
+                fn(...args)
+              }, threshold)
+            }
+          }
+        }
+        
+          document.querySelector('#panel').addEventListener('mousemove', throttle((e) => console.log(e.pageX, e.pageY)))
+      }
+    </script>
+  </body>
+
+</html>
