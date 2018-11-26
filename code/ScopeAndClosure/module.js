@@ -2,8 +2,10 @@ const MyModules = (function Manager() {
   const modules = {}
 
   function define(name, deps, impl) {
-    for (let i = 0; i < deps.length; i += 1) {
-      deps[i] = modules[deps[i]]
+    if (Array.isArray(deps)) {
+      deps = deps.map(currentItem => {
+        return modules[currentItem]
+      })
     }
     modules[name] = impl(...deps)
   }

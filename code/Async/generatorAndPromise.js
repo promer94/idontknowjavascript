@@ -10,7 +10,7 @@ function doLater(a, b) {
 
 function* main() {
   const result = yield doLater(1, 2)
-  return result
+  return result + 10
 }
 const it = main()
 it.next()

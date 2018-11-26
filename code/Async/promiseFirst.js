@@ -13,6 +13,7 @@ if (!Promise.first) {
           .then(resolve)
           .catch(error => {
             if (error) a += 1
+            // if all the promise fails.
             if (a === prs.length) reject(new Error('All promise are failed'))
           })
       })
