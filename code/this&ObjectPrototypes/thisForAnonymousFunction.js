@@ -1,6 +1,6 @@
-var num = 1 //eslint-disable-line
+/* eslint-disable */
+var num = 1
 var myObject = {
-  //eslint-disable-line
   num: 2,
   add() {
     this.num = 3
@@ -15,7 +15,7 @@ var myObject = {
   }
 }
 myObject.add()
-console.log(myObject.num) //s
+console.log(myObject.num)
 console.log(num)
-var sub = myObject.sub //eslint-disable-line
+var sub = myObject.sub
 sub()
